@@ -88,6 +88,28 @@ body {
 .price {
   color: #c59d5f;
 }
+.item-info a {
+  text-decoration: none;
+  /* background-color: #c59d5f; */
+  padding: 8px 10px;
+  width: fit-content;
+  transition: 0.5s;
+  border-radius: 0.5rem;
+  color: black;
+}
+.item-info a:hover {
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.fa-solid {
+  color: #c59d5f;
+}
+
+.fa-solid:hover {
+  color: #fff;
+}
+
 .item-text {
   margin-bottom: 0;
   padding-top: 1rem;
