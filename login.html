@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
     <title>login</title>
-</head>
-<body>
-    <h2>login</h2>
-</body>
+  </head>
+  <body>
+    <p>pas encore inscrit? <a href="./inscription.html"> inscrivez-vous</a></p>
+
+    <div id="container">
+      <form>
+        <h1>Connexion</h1>
+
+        <label for="username"><b>Nom d'utilisateur</b></label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Entrer le nom d'utilisateur"
+          name="username"
+          required
+        />
+
+        <label><b>Mot de passe</b></label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Entrer le mot de passe"
+          name="password"
+          required
+        />
+
+        <input type="submit" id="submit" value="Se Connecter" />
+        <a href="./index.html">Annuler</a>
+      </form>
+    </div>
+    <script src="./scripts/login.js"></script>
+  </body>
 </html>
