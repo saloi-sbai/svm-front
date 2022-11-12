@@ -64,12 +64,10 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  
 }
 .menu-item {
   margin-left: 10px;
   margin-right: 10px;
-  
 }
 
 .photo {
@@ -117,6 +115,48 @@ body {
 .item-text {
   margin-bottom: 40px;
   padding-top: 1rem;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 14px;
+}
+
+@media screen and (max-width: 938px) {
+  .section-center {
+    display: flex;
+    flex-direction: column;
+  }
+  .first-title {
+    font-size: 1rem;
+  }
+  .second-title h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .section-center {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .first-title {
+    font-size: 1rem;
+  }
+  .second-title h2 {
+    font-size: 1rem;
+  }
+  .photo {
+    object-fit: cover;
+    height: 100px;
+    width: 200px;
+    border: 0.25rem solid #c59d5f;
+    border-radius: 0.5rem;
+  }
+  .btn-container {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.filter-btn {
+  margin-bottom: 5px;
+}
 }
