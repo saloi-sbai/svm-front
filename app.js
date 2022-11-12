@@ -28,14 +28,14 @@ function afficher(data) {
           />
           <div class="item-info">
             <header>
-              <h4>"${item.nom}"</h4>
-              <h4 class="${item.prix}">14€</h4>
+              <h4>${item.nom}</h4>
+              <h4 class="price">${item.prix} €</h4>
               <button class="filter-btn" type="button">
                 <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
               </button>
             </header>
             <p class="item-text">
-              "${item.description}"
+              ${item.description}
             </p>
           </div>
         </article>

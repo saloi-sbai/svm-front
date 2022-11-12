@@ -11,6 +11,8 @@ body {
   color: hsl(209, 61%, 16%);
   line-height: 1.5;
   font-size: 0.875rem;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* menu */
@@ -58,22 +60,22 @@ body {
   color: #fff;
 }
 .section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-  display: grid;
-  gap: 3rem 2rem;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  
 }
 .menu-item {
-  display: grid;
-  gap: 1rem 2rem;
-  max-width: 25rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  
 }
 
 .photo {
   object-fit: cover;
   height: 200px;
+  width: 400px;
   border: 0.25rem solid #c59d5f;
   border-radius: 0.5rem;
 }
@@ -84,6 +86,8 @@ body {
 }
 .item-info h4 {
   margin-bottom: 0.5rem;
+  font-size: 20px;
+  font-weight: bold;
 }
 .price {
   color: #c59d5f;
@@ -111,6 +115,8 @@ body {
 }
 
 .item-text {
-  margin-bottom: 0;
+  margin-bottom: 40px;
   padding-top: 1rem;
+  font-weight:bold;
+  font-size: 14px;
 }
