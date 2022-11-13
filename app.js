@@ -2,19 +2,54 @@ const api_url =
   "http://localhost/SVM-back/controllers/produits/getProducts.php";
 
 const articles = document.querySelector(".section-center");
+let filter = "";
+let vueFiltree = [];
+let data = [];
+const plats = document.getElementById("plats");
+const Dessert = document.getElementById("dessert");
+const Entrée = document.getElementById("entrée");
+const tous = document.getElementById("tous");
 
 async function getapi(url) {
   // je mets le resultat dans la variable response
   const response = await fetch(url);
 
   // je convertis le resultat en forma json
-  const resultat = await response.json();
-  console.log(resultat);
-  afficher(resultat);
+  data = await response.json();
+  afficher(data);
 }
 
 // j'appelle la fonction getapi avec l'url de mon back
 getapi(api_url);
+
+
+// il faut filter les resultats (data ) et afficher ce resultat en le donnant à la fonction affciher(data)
+
+
+plats.addEventListener("click", (e) => {
+  filter = "plats";
+  vueFiltree = data.filter((item) => item.categorie === filter);
+  afficher(vueFiltree);
+  //location.reload();
+});
+
+Dessert.addEventListener("click", (e) => {
+  filter = "dessert";
+  vueFiltree = data.filter((item) => item.categorie === filter);
+  afficher(vueFiltree);
+  //location.reload();
+});
+
+Entrée.addEventListener("click", (e) => {
+  filter = "entrée";
+  vueFiltree = data.filter((item) => item.categorie === filter);
+  afficher(vueFiltree);
+  //location.reload();
+});
+
+tous.addEventListener("click", (e) => {
+  afficher(data);
+})
 
 function afficher(data) {
   let article = data
