@@ -10,7 +10,6 @@ submit.addEventListener("click", (e) => {
   if (username.value && password1.value && password2.value) {
     if (password1.value === password2.value) {
       //Todo verfier la longueur du mot de passe
-      console.log("1");
       body = {
         username: username.value,
         password: password1.value,
@@ -26,7 +25,6 @@ submit.addEventListener("click", (e) => {
 
 //le job est d'envoyer à l'API les informations pour créer un utilisateur.
 async function register(body) {
-  console.log("2");
   const rawResponse = await fetch(apiUrl, {
     method: "post",
     headers: {
@@ -38,5 +36,3 @@ async function register(body) {
   const content = await rawResponse.json();
   console.log(content);
 }
-//CORS : chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
-//https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome
