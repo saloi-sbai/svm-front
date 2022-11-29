@@ -18,13 +18,28 @@
   </head>
   <body>
     <section class="menu">
+      <!-- login -->
+      <div class="login-btn login-menu" id="visiteur">
+        <a class="filter-btn" id="user" href="./login.html">Se connecter</a>
+        /
+        <a class="filter-btn" href="./inscription.html">S'inscrire</a>
+        <a class="filter-btn" href="./panier.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+
+      <!-- menu une fois authentifié -->
+      <div class="login-menu" id="inscrit">
+        <p id="bonjour">Bonjour</p>
+        <a class="filter-btn" id="logout" href="">Se déconnecter</a>
+        <a class="filter-btn" href="./panier.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+
       <div class="first-title">
         <h1>Bienvenu chez saveurs du Maroc</h1>
         <div class="underline"></div>
       </div>
 
       <div class="second-title">
-        <h2>Notre menu</h2>
+        <h2>Notre carte</h2>
       </div>
 
       <div class="btn-container">
@@ -32,12 +47,12 @@
         <button class="filter-btn" type="button" id="entrée" >Entrée</button>
         <button class="filter-btn" type="button" id="plats" >Plats</button>
         <button class="filter-btn" type="button"id="dessert" >Dessert</button>
-        <button class="filter-btn" type="button">
+        <!-- <button class="filter-btn" type="button">
           <a href="./login.html"><i class="fa-solid fa-user"></i></a>
-        </button>
-        <button class="filter-btn" type="button">
+        </button> -->
+        <!-- <button class="filter-btn" type="button">
           <a href="./panier.html"><i class="fa-solid fa-cart-shopping"></i></a>
-        </button>
+        </button> -->
       </div>
 
       <!-- menu -->

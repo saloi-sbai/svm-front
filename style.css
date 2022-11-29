@@ -17,7 +17,41 @@ body {
 
 /* menu */
 .menu {
-  padding: 5rem 0;
+  padding: 2rem 0;
+}
+
+.login-menu {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.login-menu p {
+  text-decoration: none;
+  color: #c59d5f;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.login-btn {
+  margin-top: 1rem;
+  text-align: right;
+  color: #c59d5f;
+}
+#logout {
+  text-decoration: none;
+  font-weight: bold;
+}
+.login-btn button {
+  font-size: 10px;
+}
+.login-btn a {
+  padding-top: 10px;
+  text-decoration: none;
+  color: #c59d5f;
+  font-weight: bold;
+}
+.login-btn a:hover {
+  letter-spacing: 1px;
+  color: #fff;
 }
 .first-title {
   text-align: center;
@@ -118,6 +152,28 @@ body {
   font-weight: bold;
   font-size: 14px;
 }
+.rediriger {
+  font-size: .70rem;
+  color: #03A64A;
+}
+.message {
+  text-align: center;
+  border-radius: 10px;
+  font-size: .90rem;
+  height: 30px;
+  padding: 5px;
+}
+.success {
+  color: #03A64A;
+  border: 1px solid #04BF8A;
+}
+.error {
+  color: #F27405;
+  border: 1px solid #F23005;
+}
+.hide {
+  display: none;
+}
 
 @media screen and (max-width: 938px) {
   .section-center {
@@ -159,4 +215,27 @@ body {
 .filter-btn {
   margin-bottom: 5px;
 }
+}
+
+.rediriger {
+  font-size: .70rem;
+  color: #03A64A;
+}
+
+.message {
+  text-align: center;
+  border-radius: 10px;
+  font-size: .90rem;
+  height: 30px;
+  padding: 5px;
+}
+
+.success {
+  color: #03A64A;
+  border: 1px solid #04BF8A;
+}
+
+.error {
+  color: #F27405;
+  border: 1px solid #F23005;
 }

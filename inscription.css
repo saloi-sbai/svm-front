@@ -71,3 +71,14 @@ button:hover {
   color: #9c3e00;
   border: 1px solid #9c3e00;
 }
+
+/*message d'erreur*/
+.reponse {
+  text-align: center;
+}
+.error {
+  color: #f47351;
+}
+.succes {
+  color: green;
+}

@@ -9,6 +9,26 @@ const plats = document.getElementById("plats");
 const Dessert = document.getElementById("dessert");
 const Entrée = document.getElementById("entrée");
 const tous = document.getElementById("tous");
+const user = document.getElementById("bonjour");
+const visiteur = document.getElementById("visiteur");
+const inscrit = document.getElementById("inscrit");
+const logout = document.getElementById("logout");
+
+// comment cacher le bouton lorsque l'on authentifié
+if (localStorage.getItem("username")) {
+  visiteur.classList.add("hide");
+  inscrit.classList.remove("hide");
+  user.innerHTML = "Bonjour " + localStorage.getItem("username");
+} else {
+  visiteur.classList.remove("hide");
+  inscrit.classList.add("hide");
+}
+
+logout.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.removeItem("username");
+  location.href = "./index.html";
+});
 
 async function getapi(url) {
   // je mets le resultat dans la variable response
@@ -22,9 +42,7 @@ async function getapi(url) {
 // j'appelle la fonction getapi avec l'url de mon back
 getapi(api_url);
 
-
 // il faut filter les resultats (data ) et afficher ce resultat en le donnant à la fonction affciher(data)
-
 
 plats.addEventListener("click", (e) => {
   filter = "plats";
@@ -49,7 +67,7 @@ Entrée.addEventListener("click", (e) => {
 
 tous.addEventListener("click", (e) => {
   afficher(data);
-})
+});
 
 function afficher(data) {
   let article = data
@@ -66,7 +84,7 @@ function afficher(data) {
               <h4>${item.nom}</h4>
               <h4 class="price">${item.prix} €</h4>
               <button class="filter-btn" type="button">
-                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                <a href="./panier.html"><i class="fa-solid fa-cart-plus"></i></a>
               </button>
             </header>
             <p class="item-text">
