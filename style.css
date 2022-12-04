@@ -126,7 +126,7 @@ body {
 }
 .item-info a {
   text-decoration: none;
-  /* background-color: #c59d5f; */
+  
   padding: 8px 10px;
   width: fit-content;
   transition: 0.5s;
