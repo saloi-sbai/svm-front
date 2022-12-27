@@ -2,6 +2,7 @@ const username = document.getElementById("username");
 const password = document.getElementById("password");
 const submit = document.getElementById("submit");
 const apiUrl = "http://localhost/SVM-back/controllers/user/getUser.php";
+let message = document.getElementById("message");
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
@@ -16,7 +17,6 @@ submit.addEventListener("click", (e) => {
 });
 
 async function send(person) {
-  console.log("here: ", JSON.stringify(person));
   const rawResponse = await fetch(apiUrl, {
     method: "post",
     headers: {
@@ -35,20 +35,6 @@ async function send(person) {
   } else {
     localStorage.setItem("username", content[0].nom);
     localStorage.setItem("username_id", content[0].id);
-    location.href = "./index.html";
+    location.href = "../index.html";
   }
 }
-
-/*
-{
-    "nom" : valeur,
-    "password" : valeur
-}
-
-login: function() {
-    console.log('utilisateur connecté');
-}
-person.login();
-
-
-*/

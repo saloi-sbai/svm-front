@@ -13,6 +13,7 @@ body {
   font-size: 0.875rem;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 /* menu */
@@ -152,6 +153,8 @@ body {
   font-weight: bold;
   font-size: 14px;
 }
+
+
 .rediriger {
   font-size: .70rem;
   color: #03A64A;
@@ -176,6 +179,9 @@ body {
 }
 
 @media screen and (max-width: 938px) {
+   body {
+    overflow-x: hidden;
+  }
   .section-center {
     display: flex;
     flex-direction: column;
@@ -186,9 +192,13 @@ body {
   .second-title h2 {
     font-size: 1rem;
   }
+ 
 }
 
 @media screen and (max-width: 508px) {
+  body {
+  overflow-x: hidden;
+}
   .section-center {
     display: grid;
     grid-template-columns: 1fr;
@@ -215,6 +225,7 @@ body {
 .filter-btn {
   margin-bottom: 5px;
 }
+
 }
 
 .rediriger {

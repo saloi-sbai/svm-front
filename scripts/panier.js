@@ -8,7 +8,7 @@ if (localStorage.getItem("username")) {
   inscrit.classList.remove("hide");
   user.innerHTML = "Bonjour " + localStorage.getItem("username");
 } else {
-  location.href = "./login.html";
+  location.href = "./pages/login.html";
 }
 
 logout.addEventListener("click", (e) => {

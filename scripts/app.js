@@ -48,21 +48,18 @@ plats.addEventListener("click", (e) => {
   filter = "plats";
   vueFiltree = data.filter((item) => item.categorie === filter);
   afficher(vueFiltree);
-  //location.reload();
 });
 
 Dessert.addEventListener("click", (e) => {
   filter = "dessert";
   vueFiltree = data.filter((item) => item.categorie === filter);
   afficher(vueFiltree);
-  //location.reload();
 });
 
 Entrée.addEventListener("click", (e) => {
   filter = "entrée";
   vueFiltree = data.filter((item) => item.categorie === filter);
   afficher(vueFiltree);
-  //location.reload();
 });
 
 tous.addEventListener("click", (e) => {
@@ -84,7 +81,7 @@ function afficher(data) {
               <h4>${item.nom}</h4>
               <h4 class="price">${item.prix} €</h4>
               <button class="filter-btn" type="button">
-                <a href="./panier.html"><i class="fa-solid fa-cart-plus"></i></a>
+                <a href="./pages/panier.html"><i class="fa-solid fa-cart-plus"></i></a>
               </button>
             </header>
             <p class="item-text">

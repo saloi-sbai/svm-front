@@ -15,7 +15,6 @@ cancel.addEventListener("click", () => {
 submit.addEventListener("click", (e) => {
   if (username.value && password1.value && password2.value) {
     if (password1.value === password2.value) {
-      
       body = {
         username: username.value,
         password: password1.value,
@@ -44,6 +43,7 @@ async function register(body) {
     body: JSON.stringify(body),
   });
   const response = await rawResponse.json();
+
   if (response.code == 201) {
     message.innerHTML = "le profil a bien été crée";
     message.classList.add("success");
