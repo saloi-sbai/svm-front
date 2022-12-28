@@ -8,11 +8,11 @@ if (localStorage.getItem("username")) {
   inscrit.classList.remove("hide");
   user.innerHTML = "Bonjour " + localStorage.getItem("username");
 } else {
-  location.href = "./pages/login.html";
+  location.href = "../pages/login.html";
 }
 
 logout.addEventListener("click", (e) => {
   e.preventDefault();
   localStorage.removeItem("username");
-  location.href = "./index.html";
+  location.href = "../index.html";
 });

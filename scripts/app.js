@@ -81,7 +81,7 @@ function afficher(data) {
               <h4>${item.nom}</h4>
               <h4 class="price">${item.prix} €</h4>
               <button class="filter-btn" type="button">
-                <a href="./pages/panier.html"><i class="fa-solid fa-cart-plus"></i></a>
+                <a href="../pages/panier.html"><i class="fa-solid fa-cart-plus"></i></a>
               </button>
             </header>
             <p class="item-text">
